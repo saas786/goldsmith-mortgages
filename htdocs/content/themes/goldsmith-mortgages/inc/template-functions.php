@@ -39,3 +39,33 @@ Action::add('wp_head', function () {
 Action::add('after_setup_theme', function () {
     $GLOBALS['content_width'] = 640;
 }, 0);
+
+Action::add('after_setup_theme', function () {
+    Filter::add('show_admin_bar', function () {
+        return false;
+    });
+});
+
+Action::add('login_enqueue_scripts', function () {
+    echo '
+    <style type="text/css">
+        body {
+            background-image: url(' . get_stylesheet_directory_uri() . '/assets/imgs/admin-bg.jpg) !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: bottom left !important;
+        }
+
+        #login h1 a {
+            background-color: #ffffff;
+            background-image: url(' . get_stylesheet_directory_uri() . '/assets/imgs/admin-logo.png) !important;
+            background-size: auto;
+            margin: 0;
+            width: 100%;
+        }
+    </style>';
+});
+
+Action::add('wp_enqueue_scripts', function () {
+    wp_enqueue_style('dashicons');
+});

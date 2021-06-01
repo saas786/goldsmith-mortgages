@@ -1,0 +1,73 @@
+@import url('https://use.typekit.net/koz8klq.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply w-[15px];
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white;
+
+  &:hover {
+    @apply bg-white;
+  }
+}
+
+html {
+  body {
+    font-family: roboto, sans-serif;
+
+    .font-primary {
+      font-family: roboto, sans-serif;
+    }
+
+    .font-secondary {
+      font-family: mencken-std-head, sans-serif;
+    }
+  }
+
+  &:lang(en-NZ) {
+    body {
+      font-family: roboto, sans-serif;
+
+      .font-primary {
+        font-family: roboto, sans-serif;
+      }
+
+      .font-secondary {
+        font-family: mencken-std-head, sans-serif;
+      }
+    }
+  }
+
+  &:lang(zh-CN) {
+    body {
+      font-family: source-han-serif-sc, sans-serif;
+
+      .font-primary {
+        font-family: source-han-serif-sc, sans-serif;
+      }
+
+      .font-secondary {
+        font-family: source-han-serif-sc, sans-serif;
+      }
+    }
+  }
+}
+
+html, body {
+  @apply relative h-full;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply debug-screens;
+  touch-action: manipulation;
+}

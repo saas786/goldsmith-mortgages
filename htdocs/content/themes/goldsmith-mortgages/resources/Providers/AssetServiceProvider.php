@@ -28,10 +28,6 @@ class AssetServiceProvider extends ServiceProvider
         Asset::add('theme_js', 'js/theme.min.js', [], $theme->getHeader('version'))->to('front');
 
         Asset::add('app-style', 'css/app.css', [], $theme->getHeader('version'))->to('front');
-        $app = Asset::add('app-script', 'js/app.js', [], $theme->getHeader('version'))->to('front');
-        $app->localize('app_script_data', [
-            'wp_ajax'  => admin_url('admin-ajax.php'),
-            'wp_nonce' => wp_create_nonce('wp-nonce'),
-        ]);
+        Asset::add('app-script', 'js/app.js', [], $theme->getHeader('version'))->to('front');
     }
 }

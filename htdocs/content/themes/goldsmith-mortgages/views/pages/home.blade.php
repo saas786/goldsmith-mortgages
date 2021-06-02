@@ -33,5 +33,7 @@
                 <div>{{ $product['content'] }}</div>
             @endforeach
         </div>
+        @template('parts.content', 'testimonial')
+        @template('parts.content', 'enquiry')
     </div>
 @endsection

@@ -69,3 +69,23 @@ Action::add('login_enqueue_scripts', function () {
 Action::add('wp_enqueue_scripts', function () {
     wp_enqueue_style('dashicons');
 });
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(
+        [
+            'menu_title' => 'Website',
+            'page_title' => 'Website',
+            'menu_slug'  => 'website',
+            'redirect'   => false
+        ]
+    );
+
+//    acf_add_options_sub_page(
+//        [
+//            'menu_title'  => 'Sub Page',
+//            'page_title'  => 'Sub Page',
+//            'menu_slug'   => 'sub-page',
+//            'parent_slug' => 'website',
+//        ]
+//    );
+}

@@ -2038,6 +2038,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alpinejs__WEBPACK_IMPORTED_MODULE_0__);
 
+/**
+ * Header Menu
+ */
+
+function headerTransitions() {
+  var header = document.getElementById('header');
+
+  if (header) {
+    // let height = header.getBoundingClientRect().height;
+    var height = 0;
+
+    if (window.scrollY > height) {
+      header.classList.add('h-[100px]');
+      header.classList.remove('h-[150px]');
+    } else {
+      header.classList.add('h-[150px]');
+      header.classList.remove('h-[100px]');
+    }
+  }
+}
+
+headerTransitions();
+document.addEventListener('scroll', function () {
+  headerTransitions();
+});
+/**
+ * Scroll to Top
+ */
+
+var scroll_to_top_button = document.getElementById('scroll-to-top-button');
+
+var toggleScrollToTopButton = function toggleScrollToTopButton() {
+  var y = window.scrollY;
+
+  if (y > 0) {
+    scroll_to_top_button.classList.add('opacity-100');
+    scroll_to_top_button.classList.remove('opacity-0');
+  } else {
+    scroll_to_top_button.classList.add('opacity-0');
+    scroll_to_top_button.classList.remove('opacity-100');
+  }
+};
+
+window.addEventListener('scroll', toggleScrollToTopButton);
+
+var scrollToTop = function scrollToTop() {
+  var scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (scrolled > 0) {
+    window.scrollTo(0, 0);
+  }
+};
+
+scroll_to_top_button.onclick = function (e) {
+  e.preventDefault();
+  scrollToTop();
+};
 })();
 
 /******/ })()

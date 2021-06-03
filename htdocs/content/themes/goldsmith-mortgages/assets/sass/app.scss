@@ -22,13 +22,15 @@
 
 html {
   body {
+    @apply bg-cod-gray;
+
     font-family: mencken-std-head, sans-serif;
 
-    .font-primary {
+    .font-primary-default {
       font-family: mencken-std-head, sans-serif;
     }
 
-    .font-secondary {
+    .font-secondary-default {
       font-family: roboto, sans-serif;
     }
   }
@@ -70,4 +72,20 @@ html, body {
 body {
   @apply debug-screens;
   touch-action: manipulation;
+}
+
+.language {
+  @apply bg-cape-palliser py-[5px] px-[10px] rounded-[30px];
+  select {
+    @apply text-white bg-cape-palliser border-[0px] cursor-pointer;
+  }
+}
+
+.pattern-1 {
+  @apply relative mb-[10px];
+
+  &:before {
+    content: ' ';
+    @apply absolute left-0 bottom-[-10px] w-[25px] h-[1px] bg-cape-palliser;
+  }
 }

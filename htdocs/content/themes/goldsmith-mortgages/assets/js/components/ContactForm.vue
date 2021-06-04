@@ -14,7 +14,7 @@
                       enquiry_label_1
                     }}
                     *</label>
-                  <small v-if="errors.length" class="text-cape-palliser">{{ errors[0] }}</small>
+                  <small v-if="errors.length" class="text-cape-palliser">{{ $t(errors[0]) }}</small>
                 </div>
                 <input type="text" class="font-secondary bg-white bg-opacity-[80%] w-full h-[45px] px-[15px] rounded-[5px]" v-bind:class="errors.length ? 'border-[2px] border-cape-palliser' : ''" v-model="name" id="name">
               </ValidationProvider>
@@ -26,7 +26,7 @@
                       enquiry_label_4
                     }}
                     *</label>
-                  <small v-if="errors.length" class="text-cape-palliser">{{ errors[0] }}</small>
+                  <small v-if="errors.length" class="text-cape-palliser">{{ $t(errors[0]) }}</small>
                 </div>
                 <textarea rows="10" class="font-secondary bg-white bg-opacity-[80%] w-full p-[15px] rounded-[5px]" v-bind:class="errors.length ? 'border-[2px] border-cape-palliser' : ''" v-model="message" id="message"></textarea>
               </ValidationProvider>
@@ -38,7 +38,7 @@
                       enquiry_label_2
                     }}
                     *</label>
-                  <small v-if="errors.length" class="text-cape-palliser">{{ errors[0] }}</small>
+                  <small v-if="errors.length" class="text-cape-palliser">{{ $t(errors[0]) }}</small>
                 </div>
                 <input type="text" class="font-secondary bg-white bg-opacity-[80%] w-full h-[45px] px-[15px] rounded-[5px]" v-bind:class="errors.length ? 'border-[2px] border-cape-palliser' : ''" v-model="phone" id="phone">
               </ValidationProvider>
@@ -50,7 +50,7 @@
                       enquiry_label_3
                     }}
                     *</label>
-                  <small v-if="errors.length" class="text-cape-palliser">{{ errors[0] }}</small>
+                  <small v-if="errors.length" class="text-cape-palliser">{{ $t(errors[0]) }}</small>
                 </div>
                 <input type="email" class="font-secondary bg-white bg-opacity-[80%] w-full h-[45px] px-[15px] rounded-[5px]" v-bind:class="errors.length ? 'border-[2px] border-cape-palliser' : ''" v-model="email" id="email">
               </ValidationProvider>
@@ -62,7 +62,7 @@
                     <input type="checkbox" class="checkbox-input" v-model="tnc" id="tnc">
                     <div class="checkbox-control"></div>
                     <div class="checkbox-label pr-[15px]">{{ enquiry_tnc_content_1a }} <a class="checkbox-label text-cape-palliser" v-bind:href="enquiry_tnc_content_1_page" target="_blank">{{ enquiry_tnc_content_1b }}</a> {{ enquiry_tnc_content_1c }}</div>
-                    <small v-if="errors.length" class="text-cape-palliser">{{ errors[0] }}</small>
+                    <small v-if="errors.length" class="text-cape-palliser">{{ $t(errors[0]) }}</small>
                   </label>
                 </ValidationProvider>
               </div>
@@ -91,32 +91,32 @@ import axios from 'axios';
 
 extend('name_required', {
   ...required,
-  message: 'Please enter your name'
+  message: 'message.error_1'
 });
 
 extend('phone_required', {
   ...required,
-  message: 'Please enter your phone number'
+  message: 'message.error_2'
 });
 
 extend('email_required', {
   ...required,
-  message: 'Please enter your email address'
+  message: 'message.error_3'
 });
 
 extend('email_valid', {
   ...email,
-  message: 'Please enter a valid email address'
+  message: 'message.error_4'
 });
 
 extend('message_required', {
   ...required,
-  message: 'Please enter your message'
+  message: 'message.error_5'
 });
 
 extend('tnc_required', {
   ...required,
-  message: 'Please accept the terms and conditions'
+  message: 'message.error_6'
 });
 
 export default {

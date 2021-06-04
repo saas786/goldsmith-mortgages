@@ -11,8 +11,9 @@ use Themosis\Support\Facades\Asset;
 use Themosis\Support\Facades\Route;
 
 $theme = app()->make('wp.theme');
+$locale = $GLOBALS['locale'];
 
-Route::get('/', function () use ($theme) {
+Route::get('/', function () use ($theme, $locale) {
     Asset::add('testimonial-style', 'css/testimonial.css', [], $theme->getHeader('version'))->to('front');
     Asset::add('testimonial-script', 'js/testimonial.js', [], $theme->getHeader('version'))->to('front');
 
@@ -33,6 +34,7 @@ Route::get('/', function () use ($theme) {
         'enquiry_tnc_content_1_page'  => get_field('enquiry_tnc_content_1_page', 'option'),
         'google_recaptcha_site_key'   => get_field('google_recaptcha_site_key', 'option'),
         'google_recaptcha_secret_key' => get_field('google_recaptcha_secret_key', 'option'),
+        'locale'                      => $locale,
     ]);
 
     return view('pages.home');
@@ -58,7 +60,7 @@ Route::get('{locale}/about-us', function () {
     return view('pages.about-us');
 })->where(['locale' => 'en|zh']);
 
-Route::get('services', function () use ($theme) {
+Route::get('services', function () use ($theme, $locale) {
     Asset::add('testimonial-style', 'css/testimonial.css', [], $theme->getHeader('version'))->to('front');
     Asset::add('testimonial-script', 'js/testimonial.js', [], $theme->getHeader('version'))->to('front');
 
@@ -79,6 +81,7 @@ Route::get('services', function () use ($theme) {
         'enquiry_tnc_content_1_page'  => get_field('enquiry_tnc_content_1_page', 'option'),
         'google_recaptcha_site_key'   => get_field('google_recaptcha_site_key', 'option'),
         'google_recaptcha_secret_key' => get_field('google_recaptcha_secret_key', 'option'),
+        'locale'                      => $locale,
     ]);
 
     $service = new WP_Query([
@@ -92,7 +95,7 @@ Route::get('services', function () use ($theme) {
     return view('pages.services', compact('service', 'service_array'));
 });
 
-Route::get('{locale}/services', function () use ($theme) {
+Route::get('{locale}/services', function () use ($theme, $locale) {
     Asset::add('testimonial-style', 'css/testimonial.css', [], $theme->getHeader('version'))->to('front');
     Asset::add('testimonial-script', 'js/testimonial.js', [], $theme->getHeader('version'))->to('front');
 
@@ -113,6 +116,7 @@ Route::get('{locale}/services', function () use ($theme) {
         'enquiry_tnc_content_1_page'  => get_field('enquiry_tnc_content_1_page', 'option'),
         'google_recaptcha_site_key'   => get_field('google_recaptcha_site_key', 'option'),
         'google_recaptcha_secret_key' => get_field('google_recaptcha_secret_key', 'option'),
+        'locale'                      => $locale,
     ]);
 
     $service = new WP_Query([
@@ -126,7 +130,7 @@ Route::get('{locale}/services', function () use ($theme) {
     return view('pages.services', compact('service', 'service_array'));
 })->where(['locale' => 'en|zh']);
 
-Route::get('contact-us', function () use ($theme) {
+Route::get('contact-us', function () use ($theme, $locale) {
     $contact = Asset::add('contact-script', 'js/contact.js', [], $theme->getHeader('version'))->to('front');
     $contact->localize('contact_script_data', [
         'wp_ajax'                     => admin_url('admin-ajax.php'),
@@ -144,6 +148,7 @@ Route::get('contact-us', function () use ($theme) {
         'enquiry_tnc_content_1_page'  => get_field('enquiry_tnc_content_1_page', 'option'),
         'google_recaptcha_site_key'   => get_field('google_recaptcha_site_key', 'option'),
         'google_recaptcha_secret_key' => get_field('google_recaptcha_secret_key', 'option'),
+        'locale'                      => $locale,
     ]);
 
     $map = Asset::add('map-script', 'js/map.js', [], $theme->getHeader('version'))->to('front');
@@ -156,7 +161,7 @@ Route::get('contact-us', function () use ($theme) {
     return view('pages.contact-us');
 });
 
-Route::get('{locale}/contact-us', function () use ($theme) {
+Route::get('{locale}/contact-us', function () use ($theme, $locale) {
     $contact = Asset::add('contact-script', 'js/contact.js', [], $theme->getHeader('version'))->to('front');
     $contact->localize('contact_script_data', [
         'wp_ajax'                     => admin_url('admin-ajax.php'),
@@ -174,6 +179,7 @@ Route::get('{locale}/contact-us', function () use ($theme) {
         'enquiry_tnc_content_1_page'  => get_field('enquiry_tnc_content_1_page', 'option'),
         'google_recaptcha_site_key'   => get_field('google_recaptcha_site_key', 'option'),
         'google_recaptcha_secret_key' => get_field('google_recaptcha_secret_key', 'option'),
+        'locale'                      => $locale,
     ]);
 
     $map = Asset::add('map-script', 'js/map.js', [], $theme->getHeader('version'))->to('front');

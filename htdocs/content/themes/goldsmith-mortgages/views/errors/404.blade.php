@@ -1,29 +1,12 @@
 @extends('layouts.main')
 
 @section('content')
-    <section class="error-404 not-found">
-        <header class="page-header">
-            <h1 class="page-title">{!! esc_html__('Oops! That page can&rsquo;t be found.', THEME_TD) !!}</h1>
-        </header><!-- .page-header -->
-        <div class="page-content">
-            <p>{{ esc_html__('It looks like nothing was found at this location. Maybe try one of the links below or a search?', THEME_TD) }}</p>
-            {!! get_search_form(false) !!}
-            @php(the_widget('WP_Widget_Recent_Posts'))
-            <div class="widget widget_categories">
-                <h2 class="widget-title">{{ esc_html__('Most Used Categories', THEME_TD) }}</h2>
-                <ul>
-                    {!! wp_list_categories([
-                        'orderby' => 'count',
-                        'order' => 'DESC',
-                        'show_count' => 1,
-                        'title_li' => '',
-                        'number' => 10,
-                        'echo' => false
-                    ]) !!}
-                </ul>
-            </div><!-- .widget -->
-            @php(the_widget('WP_Widget_Archives', 'dropdown=1', 'after_title=</h2>'.archive_content_message()))
-            @php(the_widget('WP_Widget_Tag_Cloud'))
+    <div class="container px-[15px] pt-[180px] mx-auto h-[100vh]">
+        <div class="flex items-center text-white transition-all ease-in-out duration-300 hover:text-cape-palliser">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-[15px] min-w-[15px] mr-[15px]" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+            <a href="{{ home_url() }}">{{ pll__('Back to Home', APP_TD) }}</a>
         </div>
-    </section>
+    </div>
 @endsection

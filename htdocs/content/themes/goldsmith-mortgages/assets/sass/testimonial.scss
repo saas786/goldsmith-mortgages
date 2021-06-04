@@ -1,1 +1,14 @@
 @import '~swiper/swiper-bundle.min.css';
+
+:root {
+  --swiper-theme-color: #A07D3F;
+  --swiper-navigation-size: 30px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  @apply flex justify-center;
+}
+
+.swiper-pagination-bullet {
+  background:  #A07D3F;
+}

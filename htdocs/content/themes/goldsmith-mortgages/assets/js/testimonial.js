@@ -8,8 +8,8 @@ let swiper_one = new Swiper('.swiper-one', {
   },
   speed: 300,
   navigation: {
-    nextEl: '.swiper-custom-next',
-    prevEl: '.swiper-custom-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: '.swiper-custom-pagination',

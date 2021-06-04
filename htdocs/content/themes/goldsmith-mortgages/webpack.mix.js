@@ -24,17 +24,17 @@ mix.webpackConfig({
   devtool: 'source-map',
 });
 
-mix.browserSync({
-  proxy: 'goldsmith-mortgages.test',
-  files: [
-    'assets/js/*.{js,vue}',
-    'assets/js/**/*.{js,vue}',
-    'assets/sass/*.scss',
-    'assets/sass/**/*.scss',
-    '*.php',
-    '**/*.php',
-  ],
-});
+// mix.browserSync({
+//   proxy: 'goldsmith-mortgages.test',
+//   files: [
+//     'assets/js/*.{js,vue}',
+//     'assets/js/**/*.{js,vue}',
+//     'assets/sass/*.scss',
+//     'assets/sass/**/*.scss',
+//     '*.php',
+//     '**/*.php',
+//   ],
+// });
 
 mix.setPublicPath('dist');
 

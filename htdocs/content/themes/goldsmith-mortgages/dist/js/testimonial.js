@@ -12214,8 +12214,8 @@ var swiper_one = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__.default('.swiper
   },
   speed: 300,
   navigation: {
-    nextEl: '.swiper-custom-next',
-    prevEl: '.swiper-custom-prev'
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   },
   pagination: {
     el: '.swiper-custom-pagination',

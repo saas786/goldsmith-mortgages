@@ -1,4 +1,7 @@
 import 'alpinejs';
+import AOS from 'aos';
+
+AOS.init();
 
 /**
  * Header Menu

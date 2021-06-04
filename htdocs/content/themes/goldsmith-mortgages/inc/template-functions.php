@@ -91,6 +91,10 @@ if (function_exists('acf_add_options_page')) {
 //    );
 }
 
+if (function_exists('pll_register_string')) {
+    pll_register_string('back_to_home', 'Back to Home');
+}
+
 function validateRecaptcha($action, $token)
 {
     if (!isset($token)) {

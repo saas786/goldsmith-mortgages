@@ -4,6 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '~aos/dist/aos.css';
+
 ::-webkit-scrollbar {
   @apply w-[10px];
 }
@@ -22,7 +24,7 @@
 
 html {
   body {
-    @apply bg-cod-gray;
+    @apply bg-cod-gray overflow-x-hidden;
 
     font-family: mencken-std-head, sans-serif;
 
@@ -87,5 +89,23 @@ body {
   &:before {
     content: ' ';
     @apply absolute left-0 bottom-[-10px] w-[25px] h-[1px] bg-cape-palliser;
+  }
+}
+
+.pattern-2 {
+  @apply relative mb-[10px];
+
+  &:before {
+    content: ' ';
+    @apply absolute left-[50%] bottom-[-10px] w-[25px] h-[1px] bg-cape-palliser transform translate-x-[-50%];
+  }
+}
+
+.pattern-3 {
+  @apply relative mb-[30px];
+
+  &:before {
+    content: ' ';
+    @apply absolute left-[50%] bottom-[-30px] w-[135px] h-[2px] bg-white transform translate-x-[-50%];
   }
 }

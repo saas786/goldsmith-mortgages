@@ -86,8 +86,10 @@ Route::get('services', function () use ($theme) {
         'orderby'   => 'ID',
         'order'     => 'ASC',
     ]);
+    $service_array = $service->get_posts();
+    $service_array = array_slice($service_array, 0, 3);
 
-    return view('pages.services', compact('service'));
+    return view('pages.services', compact('service', 'service_array'));
 });
 
 Route::get('{locale}/services', function () use ($theme) {
@@ -118,8 +120,10 @@ Route::get('{locale}/services', function () use ($theme) {
         'orderby'   => 'ID',
         'order'     => 'ASC',
     ]);
+    $service_array = $service->get_posts();
+    $service_array = array_slice($service_array, 0, 3);
 
-    return view('pages.services', compact('service'));
+    return view('pages.services', compact('service', 'service_array'));
 })->where(['locale' => 'en|zh']);
 
 Route::get('contact-us', function () use ($theme) {

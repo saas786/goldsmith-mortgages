@@ -57,13 +57,13 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-[20px] min-w-[20px] mr-[30px]" viewBox="0 0 20 20" fill="#ffffff" stroke="#1A1A1A">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                 </svg>
-                <a class="font-secondary font-light text-[14px] leading-[24px] text-white mt-[-5px]" href="tel:{{ get_field('company_phone', 'option') }}">{!! get_field('company_phone', 'option') !!}</a>
+                <a class="font-secondary font-light text-[14px] leading-[24px] text-white mt-[-5px] transition-all ease-in-out duration-300 hover:text-cape-palliser" href="tel:{{ get_field('company_phone', 'option') }}">{!! get_field('company_phone', 'option') !!}</a>
             </div>
             <div class="flex pb-[15px]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-[20px] min-w-[20px] mr-[30px]" viewBox="0 0 20 20" fill="#ffffff" stroke="#1A1A1A">
                     <path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z" clip-rule="evenodd"/>
                 </svg>
-                <a class="font-secondary font-light text-[14px] leading-[24px] text-white mt-[-5px]" href="mailto:{{ get_field('company_email', 'option') }}">{!! get_field('company_email', 'option') !!}</a>
+                <a class="font-secondary font-light text-[14px] leading-[24px] text-white mt-[-5px] transition-all ease-in-out duration-300 hover:text-cape-palliser" href="mailto:{{ get_field('company_email', 'option') }}">{!! get_field('company_email', 'option') !!}</a>
             </div>
             <div class="flex pb-[15px]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-[20px] min-w-[20px] mr-[30px]" viewBox="0 0 24 24" fill="#ffffff" stroke="#1A1A1A">

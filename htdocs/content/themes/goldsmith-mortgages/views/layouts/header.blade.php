@@ -47,7 +47,7 @@
         </div>
     </div>
 </div>
-<div id="header" class="hidden xl:flex items-center justify-between bg-cod-gray w-full h-[150px] px-[260px] transition-all duration-300 ease-in-out fixed z-[9999]">
+<div id="header" class="hidden xl:flex items-center justify-between bg-cod-gray w-full h-[120px] px-[260px] transition-all duration-300 ease-in-out fixed z-[9999]">
     <a href="{{ $home_url }}">
         <img class="self-center" src="{{ get_field('header_logo', 'option')['url'] }}" alt="">
     </a>

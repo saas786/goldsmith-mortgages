@@ -20,6 +20,10 @@
     </div>
     <div class="container px-[15px] py-[170px] mx-auto">
         <div class="grid grid-cols-2 gap-y-[75px] xl:gap-x-[75px]">
+            @php
+                $contact_us_label = get_field('contact_us_label');
+                $contact_us_page = get_field('contact_us_page');
+            @endphp
             @while($service->have_posts())
                 {{ $service->the_post() }}
                 <div data-aos="fade-up" data-aos-duration="500" data-aos-once="true" class="col-span-2 xl:col-span-1 flex flex-col" x-data="{ hover: false }">
@@ -32,8 +36,11 @@
                             <div class="font-primary text-cape-palliser text-[24px] pb-[30px]">{{ the_title() }}</div>
                             <div class="font-secondary font-light text-gallery text-[14px] pb-[40px]">{{ the_excerpt() }}</div>
                         </div>
-                        <a href="{{ the_permalink() }}" class="self-start font-secondary font-light text-white text-[14px] bg-cape-palliser px-[15px] py-[5px] border-[1px] border-cape-palliser rounded-[30px] mr-[5px] cursor-pointer transition-all ease-in-out duration-300 hover:text-black hover:bg-cape-palliser hover:border-cape-palliser">
+                        <a href="{{ the_permalink() }}" class="hidden self-start font-secondary font-light text-white text-[14px] bg-cape-palliser px-[15px] py-[5px] border-[1px] border-cape-palliser rounded-[30px] mr-[5px] cursor-pointer transition-all ease-in-out duration-300 hover:text-black hover:bg-cape-palliser hover:border-cape-palliser">
                             {{ the_field('label') }}
+                        </a>
+                        <a href="{{ $contact_us_page }}" class="self-start font-secondary font-light text-white text-[14px] bg-cape-palliser px-[15px] py-[5px] border-[1px] border-cape-palliser rounded-[30px] mr-[5px] cursor-pointer transition-all ease-in-out duration-300 hover:text-black hover:bg-cape-palliser hover:border-cape-palliser">
+                            {{ $contact_us_label }}
                         </a>
                     </div>
                 </div>

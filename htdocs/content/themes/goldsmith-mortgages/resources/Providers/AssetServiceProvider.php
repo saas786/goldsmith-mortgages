@@ -48,6 +48,7 @@ class AssetServiceProvider extends ServiceProvider
 
         View::composer(['layouts.header', 'layouts.footer'], function ($view) {
             $menus = wp_get_nav_menu_items(get_nav_menu_locations()['menu-1']);
+            $menus_2 = wp_get_nav_menu_items(get_nav_menu_locations()['menu-2']);
 
             global $wp;
             $current_url = home_url(add_query_arg(array(), $wp->request)) . '/';
@@ -58,7 +59,7 @@ class AssetServiceProvider extends ServiceProvider
                 'order'     => 'ASC',
             ]);
 
-            $view->with(compact('menus', 'current_url', 'service'));
+            $view->with(compact('menus', 'menus_2', 'current_url', 'service'));
         });
     }
 }

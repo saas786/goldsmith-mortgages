@@ -10,17 +10,17 @@
     </div>
     <div class="container px-[15px] mx-auto mt-[-125px] flex relative z-[1]">
         <div data-aos="fade-right" data-aos-duration="500" data-aos-once="true" class="w-[33%] p-[30px] xl:py-[40px] xl:px-[40px] bg-mine-shaft">
-            <img class="animate-pulse mb-[30px]" src="{{ get_field('products_2')[0]['image']['url'] }}" alt="">
+            <img class="animate-spin-custom mb-[30px]" src="{{ get_field('products_2')[0]['image']['url'] }}" alt="">
             <div class="font-primary text-[18px] text-white pb-[20px]">{{ get_field('products_2')[0]['title'] }}</div>
             <div class="font-secondary text-[12px] text-white">{!! get_field('products_2')[0]['content'] !!}</div>
         </div>
         <div data-aos="fade-up" data-aos-duration="500" data-aos-once="true" class="w-[33%] p-[30px] xl:py-[40px] xl:px-[40px] bg-dove-gray">
-            <img class="animate-pulse mb-[30px]" src="{{ get_field('products_2')[1]['image']['url'] }}" alt="">
+            <img class="animate-spin-custom mb-[30px]" src="{{ get_field('products_2')[1]['image']['url'] }}" alt="">
             <div class="font-primary text-[18px] text-white pb-[20px]">{{ get_field('products_2')[1]['title'] }}</div>
             <div class="font-secondary text-[12px] text-white">{!! get_field('products_2')[1]['content'] !!}</div>
         </div>
         <div data-aos="fade-left" data-aos-duration="500" data-aos-once="true" class="w-[33%] p-[30px] xl:py-[40px] xl:px-[40px] bg-tundora">
-            <img class="animate-pulse mb-[30px]" src="{{ get_field('products_2')[2]['image']['url'] }}" alt="">
+            <img class="animate-spin-custom mb-[30px]" src="{{ get_field('products_2')[2]['image']['url'] }}" alt="">
             <div class="font-primary text-[18px] text-white pb-[20px]">{{ get_field('products_2')[2]['title'] }}</div>
             <div class="font-secondary text-[12px] text-white">{!! get_field('products_2')[2]['content'] !!}</div>
         </div>

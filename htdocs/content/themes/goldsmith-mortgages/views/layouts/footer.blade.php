@@ -19,7 +19,7 @@
             <div>
                 <div class="pattern-1 font-primary text-[18px] text-cape-palliser">{{ get_field('footer_title_1', 'option') }}</div>
                 <div class="pb-[30px]"></div>
-                @foreach($menus as $menu)
+                @foreach($menus_2 as $menu)
                     <div class="flex items-center mb-[15px]" x-data="{ hover : false }" x-on:mouseover="hover = true" x-on:mouseover.away="hover = false">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-[15px] min-w-[15px] mr-[10px] transition-all ease-in-out duration-300" fill="none" viewBox="0 0 24 24" x-bind:stroke="hover ? '#A07D3F' : '#FFFFFF'">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>

@@ -109,3 +109,7 @@ body {
     @apply absolute left-[50%] bottom-[-30px] w-[135px] h-[2px] bg-white transform translate-x-[-50%];
   }
 }
+
+.animate-spin-custom {
+  animation: spin 10s linear infinite !important;
+}

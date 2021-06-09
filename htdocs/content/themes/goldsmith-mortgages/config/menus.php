@@ -8,4 +8,5 @@
  */
 return [
     'menu-1' => __('Header Navigation', THEME_TD),
+    'menu-2' => __('Footer Navigation', THEME_TD),
 ];

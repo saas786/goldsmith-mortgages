@@ -46,7 +46,7 @@
         <div class="grid grid-cols-2">
             @foreach(get_field('products_4') as $product)
                 <div data-aos="fade-right" data-aos-duration="500" data-aos-once="true" class="col-span-2 xl:col-span-1 flex flex-col items-center justify-start py-[120px]">
-                    <img class="mb-[70px] w-[300px] h-[300px]" src="{{ $product['image']['url'] }}" alt="">
+                    <img class="mb-0 w-[300px] h-[300px]" src="{{ $product['image']['url'] }}" alt="">
                     <div class="pattern-2 inline-block font-primary text-[24px] text-cape-palliser">{{ $product['name'] }}</div>
                     <div class="pb-[15px]"></div>
                     <div class="font-primary text-[14px] text-cape-palliser pb-[20px]">{{ $product['role'] }}</div>

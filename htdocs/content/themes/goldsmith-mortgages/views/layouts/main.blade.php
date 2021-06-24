@@ -3,6 +3,10 @@
 <head>
     <meta charset="{{ get_bloginfo('charset') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property='og:title' content='{{ get_bloginfo( 'name' ) }}'/>
+    <meta property='og:image' content='{{ get_field('banner_1', '11')['url'] }}'/>
+    <meta property='og:description' content='{{ get_bloginfo( 'description' ) }}'/>
+    <meta property='og:url' content='{{ get_bloginfo( 'wpurl' ) }}'/>
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="{{ get_theme_file_uri('/assets/imgs/favicon.ico') }}" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ get_theme_file_uri('/assets/imgs/apple-touch-icon.png') }}">

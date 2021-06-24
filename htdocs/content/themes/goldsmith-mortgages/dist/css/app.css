@@ -684,6 +684,9 @@ video {
 .h-\[45px\]{
 	height: 45px !important;
 }
+.h-\[300px\]{
+	height: 300px !important;
+}
 .w-\[25px\]{
 	width: 25px !important;
 }
@@ -710,6 +713,9 @@ video {
 }
 .w-\[15px\]{
 	width: 15px !important;
+}
+.w-\[300px\]{
+	width: 300px !important;
 }
 .min-w-\[15px\]{
 	min-width: 15px !important;

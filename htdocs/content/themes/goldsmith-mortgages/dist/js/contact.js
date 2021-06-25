@@ -25493,11 +25493,11 @@ vue__WEBPACK_IMPORTED_MODULE_4__.default.use(vue_sweetalert2__WEBPACK_IMPORTED_M
 var vue_recaptcha_options = {
   siteKey: window.contact_script_data.google_recaptcha_site_key,
   loaderOptions: {
-    autoHideBadge: false,
-    explicitRenderParameters: {
-      badge: 'bottomleft',
-      size: 'invisible'
-    }
+    autoHideBadge: true // explicitRenderParameters: {
+    //   badge: 'bottomleft',
+    //   size: 'invisible',
+    // }
+
   }
 };
 vue__WEBPACK_IMPORTED_MODULE_4__.default.use(vue_recaptcha_v3__WEBPACK_IMPORTED_MODULE_2__.VueReCaptcha, vue_recaptcha_options);

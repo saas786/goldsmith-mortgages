@@ -12,11 +12,11 @@ Vue.use(VueSweetalert2);
 let vue_recaptcha_options = {
   siteKey: window.contact_script_data.google_recaptcha_site_key,
   loaderOptions: {
-    autoHideBadge: false,
-    explicitRenderParameters: {
-      badge: 'bottomleft',
-      size: 'invisible',
-    }
+    autoHideBadge: true,
+    // explicitRenderParameters: {
+    //   badge: 'bottomleft',
+    //   size: 'invisible',
+    // }
   }
 };
 

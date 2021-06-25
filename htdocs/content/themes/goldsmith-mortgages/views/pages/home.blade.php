@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="bg-no-repeat bg-cover bg-center w-full h-[90vh] relative" style="background-image: url({{ get_field('banner_1')['url'] }});">
+    <div class="bg-no-repeat bg-cover bg-center w-full h-[95vh] relative" style="background-image: url({{ get_field('banner_1')['url'] }});">
         <div class="absolute inset-0 bg-cape-palliser bg-opacity-25 w-full h-full"></div>
         <div data-aos="fade-down" data-aos-duration="500" data-aos-once="true" class="flex flex-col items-center justify-center absolute inset-0">
             <div class="font-primary text-[45px] text-white text-center">{{ get_field('title_1') }}</div>
@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="container px-[15px] py-[180px] mx-auto">
+    <div class="container px-[15px] py-[100px] mx-auto">
         <div class="grid grid-cols-3 gap-y-[80px] gap-x-[80px]">
             @foreach(get_field('products_3b') as $product)
                 <div data-aos="fade-right" data-aos-duration="500" data-aos-once="true" class="col-span-3 xl:col-span-1">

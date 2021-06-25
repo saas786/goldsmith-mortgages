@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="bg-no-repeat bg-cover bg-center w-full h-[90vh] relative" style="background-image: url({{ get_field('banner_1')['url'] }});">
+    <div class="bg-no-repeat bg-cover bg-center w-full h-[95vh] relative" style="background-image: url({{ get_field('banner_1')['url'] }});">
         <div class="absolute inset-0 bg-cape-palliser bg-opacity-25 w-full h-full"></div>
         <div data-aos="fade-down" data-aos-duration="500" data-aos-once="true" class="flex flex-col items-center justify-center absolute inset-0">
             <div class="pattern-3 font-primary text-[50px] xl:text-[65px] leading-[60px] xl:leading-[75px] text-white text-center">{{ get_field('title_1') }}</div>
@@ -45,7 +45,7 @@
         </div>
         <div class="grid grid-cols-2">
             @foreach(get_field('products_4') as $product)
-                <div data-aos="fade-right" data-aos-duration="500" data-aos-once="true" class="col-span-2 xl:col-span-1 flex flex-col items-center justify-start py-[120px]">
+                <div data-aos="fade-right" data-aos-duration="500" data-aos-once="true" class="col-span-2 xl:col-span-1 flex flex-col items-center justify-start pt-[120px] pb-[120px]">
                     <img class="mb-0 w-[300px] h-[300px]" src="{{ $product['image']['url'] }}" alt="">
                     <div class="pattern-2 inline-block font-primary text-[24px] text-cape-palliser">{{ $product['name'] }}</div>
                     <div class="pb-[15px]"></div>

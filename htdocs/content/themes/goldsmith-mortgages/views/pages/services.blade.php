@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="bg-no-repeat bg-cover bg-center w-full h-[90vh] relative" style="background-image: url({{ get_field('banner_1')['url'] }});">
+    <div class="bg-no-repeat bg-cover bg-center w-full h-[95vh] relative" style="background-image: url({{ get_field('banner_1')['url'] }});">
         <div class="absolute inset-0 bg-cape-palliser bg-opacity-25 w-full h-full"></div>
         <div data-aos="fade-down" data-aos-duration="500" data-aos-once="true" class="flex flex-col items-center justify-center absolute inset-0">
             <div class="pattern-3 font-primary text-[50px] xl:text-[65px] leading-[60px] xl:leading-[75px] text-white text-center">{{ get_field('title_1') }}</div>
@@ -18,7 +18,7 @@
             <a class="flex items-center justify-center font-primary text-[13px] xl:text-[18px] text-white text-center bg-tundora w-full h-full transition-all ease-in-out duration-300 hover:text-black hover:bg-cape-palliser" href="{!! $service_array[2]->guid !!}">{{ $service_array[2]->post_title }}</a>
         </div>
     </div>
-    <div class="container px-[15px] py-[170px] mx-auto">
+    <div class="container px-[15px] py-[150px] mx-auto">
         <div class="grid grid-cols-2 gap-y-[75px] xl:gap-x-[75px]">
             @php
                 $contact_us_label = get_field('contact_us_label');

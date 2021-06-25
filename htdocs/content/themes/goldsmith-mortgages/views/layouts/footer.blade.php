@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="bg-mine-shaft">
-    <div class="grid grid-cols-12 gap-y-[70px] xl:gap-x-[70px] py-[70px] px-[15px] xl:px-[260px]">
+    <div class="grid grid-cols-12 gap-y-[70px] xl:gap-x-[70px] pt-[70px] pb-[50px] px-[15px] xl:px-[260px]">
         <div class="col-span-12 xl:col-span-4">
             <img class="pb-[30px]" src="{{ get_field('footer_logo', 'option')['url'] }}" alt="">
             <div class="font-secondary font-light text-[14px] text-white">
@@ -74,7 +74,7 @@
         </div>
     </div>
 </div>
-<div class="flex justify-between py-[30px] px-[15px] xl:px-[260px]">
+<div class="flex justify-between py-[15px] px-[15px] xl:px-[260px]">
     <div class="font-secondary font-light text-white text-[14px]">{{ get_field('footer_copyright_1', 'option') }}</div>
     <div class="flex font-secondary text-white text-[14px]">
         <div>{{ get_field('footer_copyright_2a', 'option') }}</div>&nbsp;

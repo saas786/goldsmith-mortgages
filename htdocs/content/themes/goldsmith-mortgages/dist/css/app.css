@@ -693,6 +693,9 @@ video {
 .h-\[99vh\]{
 	height: 99vh !important;
 }
+.h-\[50vh\]{
+	height: 50vh !important;
+}
 .w-\[25px\]{
 	width: 25px !important;
 }

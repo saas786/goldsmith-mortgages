@@ -51,6 +51,10 @@
                     <div class="pb-[15px]"></div>
                     <div class="font-primary text-[14px] text-cape-palliser pb-[20px]">{{ $product['role'] }}</div>
                     <a class="font-primary text-[14px] text-cape-palliser transition-all ease-in-out duration-300 hover:text-white" href="tel:{{ $product['phone'] }}">{{ $product['phone'] }}</a>
+                    <div class="flex">
+                        <div class="font-primary text-[14px] text-cape-palliser">{{ get_field('label_4') }}</div>&nbsp;
+                        <a class="font-primary text-[14px] text-cape-palliser transition-all ease-in-out duration-300 hover:text-white" href="weixin://dl/chat?{{ $product['wechat_id'] }}">{{ $product['wechat_id'] }}</a>
+                    </div>
                     <a class="font-primary text-[14px] text-cape-palliser pb-[40px] transition-all ease-in-out duration-300 hover:text-white" href="mailto:{{ $product['email'] }}">{{ $product['email'] }}</a>
                     <div class="font-secondary font-light text-[14px] text-white text-center w-full xl:w-[70%]">{{ $product['content'] }}</div>
                 </div>
